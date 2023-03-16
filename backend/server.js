@@ -10,15 +10,6 @@ app.use(express.json());
 
 app.get("/space", async (req, res) => {
   const allSpace = await Space.find();
-  // let data = []
-  // for(let i = 0; i< allSpace.length; i++){
-  //   console.log("alll===>0",allSpace[i].path.substr(16, 8))
-  //   for(let j = 0; j < allSpace.length; j++){
-  //     if(allSpace[i].path.substr(16, 8) == allSpace[j].path.substr(16, 8)){
-  //       allSpace[i] = [{data:allSpace[j]}]
-  //     }
-  //   }
-  // }
   return res.status(200).json({data:allSpace});
 });
 
